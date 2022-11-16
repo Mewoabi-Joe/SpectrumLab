@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+	box-sizing: border-box !important;
+}
+
+body {
+	font-family: "Poppins", sans-serif !important;
+}
+
+.title {
+	letter-spacing: 4px;
+}
+
+p {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.call-to-action:hover {
+	background-color: white !important;
+}
+
+.card-style:hover {
+	cursor: pointer;
+	opacity: 0.95;
+	box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+	transform: translate3d(0px, -1px, 0px);
+}
+
+.short-card-style:hover {
+	cursor: pointer;
+}
+
+#carouselMedium > div > div.carousel-item > div > div {
+	margin: 0 !important;
+}
+#carouselLarge > div > div.carousel-item > div > div {
+	margin: 0 !important;
+}
+#services,
+#labTests,
+#getInTouch {
+	scroll-margin-top: 70px;
+}
+
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(2):hover {
+	color: white;
+}
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(2) {
+	color: #6c757d;
+}
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(1):hover {
+	color: white;
+}
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(1) {
+	color: #6c757d;
+}
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(3):hover {
+	color: white;
+}
+#root
+	> div
+	> main
+	> footer
+	> div
+	> div
+	> div.d-sm-flex.w-50.text-center.justify-content-between.mt-sm-5
+	> a:nth-child(3) {
+	color: #6c757d;
+}
+#root > div > main > footer > div > div > div.text-center.d-block > a {
+	color: #6c757d;
+}
+#root > div > main > footer > div > div > div.text-center.d-block > a:hover {
+	color: white;
+}
+
+.pointer:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#root > div > div > div > div > div.py-2.px-4.pt-3.col-md-8.col-lg-5 > label {
+	cursor: pointer;
+	/* Style as you please, it will become the visible UI component. */
+}
+
+#upload-photo {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.results-out-badge:hover {
+	cursor: pointer;
+}
+
+.user-card:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.postCard {
+	background-image: linear-gradient(to right, #ddd, white);
+}
+.postCard :hover {
+	cursor: pointer;
+}
+
+.my-overlay {
+	z-index: 100;
+}
