@@ -11,10 +11,10 @@ COPY package*.json ./
 RUN npm install
 
 # copy application files
-COPY . .
+COPY dist/ .
 
 # expose port 8080
 EXPOSE 8080
 
 # run the app
-CMD [ "node", "dist/index.js" ]
+CMD [ "node", "index.js" ]
