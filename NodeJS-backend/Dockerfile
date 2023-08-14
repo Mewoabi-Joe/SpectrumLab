@@ -2,7 +2,7 @@
 FROM node:16
 
 # create a directory to hold the application code inside the image
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # copy both package.json and package-lock.json
 COPY package*.json ./
@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # copy application files
-COPY /app/dist ./dist
+COPY . .
 
 # expose port 8080
 EXPOSE 8080
