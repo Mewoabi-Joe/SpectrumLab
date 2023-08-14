@@ -1,7 +1,8 @@
 import axios from "axios";
 
-export const baseURL = "http://localhost:8080";
+// export const baseURL = "http://localhost:8080";
 // export const baseURL = "https://backend-clinic.herokuapp.com"
+export const baseURL = "https://spectrumlab-dfhcj2cqgq-uc.a.run.app";
 
 const axiosInstance = axios.create({
 	baseURL: baseURL,
