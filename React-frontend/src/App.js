@@ -42,7 +42,7 @@ function App(props) {
 		<div className="App ">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/spectrumlab" element={<Home currentUser={user} />} />
+					<Route path="/" element={<Home currentUser={user} />} />
 				</Routes>
 				<Routes>
 					<Route path="/signup" element={<Signup currentUser={user} />} />
