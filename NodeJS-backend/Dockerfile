@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # copy application files
-COPY dist/ .
+COPY ./dist/ ./
 
 # expose port 8080
 EXPOSE 8080
