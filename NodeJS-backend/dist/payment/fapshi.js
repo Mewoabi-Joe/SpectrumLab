@@ -8,10 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const axios = require("axios");
+require("dotenv").config();
+process.env.PORT;
 const baseUrl = "https://live.fapshi.com";
 const headers = {
-    apiuser: "34b70d56-e0f8-4eff-ad0c-8fe5322d0132",
-    apikey: "FAK_f19592ff48ae86049a61880afe466e41",
+    apiuser: process.env.API_USER,
+    apikey: process.env.API_KEY,
 };
 module.exports = {
     initiatePay(data) {

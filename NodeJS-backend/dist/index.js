@@ -22,7 +22,7 @@ const payment_routes_1 = __importDefault(require("./payment/payment.routes"));
 const message_routes_1 = __importDefault(require("./routes/message.routes"));
 const rendezvous_routes_1 = __importDefault(require("./routes/rendezvous.routes"));
 const posts_routes_1 = __importDefault(require("./routes/posts.routes"));
-const PORT = process.env.PORT;
+require("dotenv").config();
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const url = "mongodb+srv://leontiusmewoabi:b2c5EAoVpr9ckgGT@cluster0.nxy2ljt.mongodb.net/?retryWrites=true&w=majority";
     const connectionParams = {

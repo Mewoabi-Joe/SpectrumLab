@@ -31,7 +31,7 @@ const PostDetails = ({ currentUser }) => {
 							opacity: 0.7,
 							backgroundBlendMode: "darken",
 							width: "100vw",
-							backgroundImage: `url(${baseURL + imageUrl})`,
+							backgroundImage: `url(${imageUrl})`,
 							// backgroundImage: `url(${externalImage})`,
 							backgroundSize: "cover",
 							backgroundRepeat: "no-repeat",

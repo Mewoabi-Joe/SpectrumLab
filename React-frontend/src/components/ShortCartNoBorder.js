@@ -10,7 +10,7 @@ const ShortCartNoBorder = ({ id, image, name, price, handleViewDetails, handleEd
 		>
 			<img
 				onClick={handleViewDetails}
-				src={baseURL + image}
+				src={image}
 				className="d-block card-img-top h-75"
 				alt="Complete Blood Count"
 				style={{ maxHeight: 150, objectFit: "cover" }}

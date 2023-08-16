@@ -36,12 +36,6 @@ const PostSchema = new mongoose_1.Schema({
         type: String,
         required: false,
     },
-    image: {
-        data: Buffer,
-        contentType: String,
-        size: Number,
-        select: false,
-    },
     youtubeVideoUrl: {
         type: String,
     },

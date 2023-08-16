@@ -3,7 +3,6 @@ import { baseURL } from "../utils/axios";
 import MoreOptions from "./MoreOptions";
 
 const MobileScreenCard = ({ id, image, name, price, handleViewDetails, handleEditTest }) => {
-	console.log(baseURL + image);
 	return (
 		<div style={{ height: "fit-content" }} className="card mb-3 w-100 border-0">
 			<div className="row g-0">

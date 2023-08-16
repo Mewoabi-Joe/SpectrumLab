@@ -10,11 +10,13 @@ import rendezvousRoutes from "./routes/rendezvous.routes";
 import postsRoutes from "./routes/posts.routes";
 require("dotenv").config();
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
 const main = async () => {
 	// const url = "mongodb+srv://ballack:ballack@clinic.devq6fd.mongodb.net/?retryWrites=true&w=majority";
-	const url = process.env.MONGO_URI;
+	// const url = process.env.MONGO_URI;
+	const url =
+		"mongodb+srv://leontiusmewoabi:b2c5EAoVpr9ckgGT@cluster0.nxy2ljt.mongodb.net/?retryWrites=true&w=majority";
 	// const url = "mongodb://localhost:27017/quizDB"
 
 	const connectionParams = {

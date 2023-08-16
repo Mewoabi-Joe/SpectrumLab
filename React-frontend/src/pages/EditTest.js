@@ -5,6 +5,8 @@ import { tests } from "../utils/testData.js";
 import axiosInstance, { baseURL } from "../utils/axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import { storage } from "../utils/firebase";
 
 const EditTest = ({ currentUser }) => {
 	const { testId } = useParams();
@@ -33,15 +35,36 @@ const EditTest = ({ currentUser }) => {
 		setLoading(true);
 		setErrors([]);
 		e.preventDefault();
-		const data = new FormData();
-		data.append("name", test.name);
-		data.append("description", test.description);
-		data.append("tags", JSON.stringify(checkedTags));
-		data.append("image", test.image);
-		data.append("price", test.price);
+		// const data = new FormData();
+		// data.append("name", test.name);
+		// data.append("description", test.description);
+		// data.append("tags", JSON.stringify(checkedTags));
+		// data.append("image", test.image);
+		// data.append("price", test.price);
+		let imageUrlToSave = test.imagePath;
+
+		if (test.imageURL) {
+			const timestamp = new Date().getTime(); // Use a timestamp as part of the filename
+			const imageName = `${timestamp}_${test.image.name}`; // Include timestamp in the filename
+			const storageRef = ref(storage, `test_images/${imageName}`);
+
+			try {
+				await uploadString(storageRef, test.imageURL, "data_url");
+			} catch (error) {
+				console.log("upload error:", error);
+			}
+
+			imageUrlToSave = await getDownloadURL(storageRef);
+		}
 
 		try {
-			const res = await axiosInstance.put("/test/" + testId, data);
+			const res = await axiosInstance.put("/test/" + testId, {
+				name: test.name,
+				description: test.description,
+				tags: JSON.stringify(checkedTags),
+				imagePath: imageUrlToSave, // Send the data URL
+				price: test.price,
+			});
 			navigate("/lab_test_details", { state: res.data.test });
 			console.log(res);
 		} catch (error) {
@@ -81,7 +104,6 @@ const EditTest = ({ currentUser }) => {
 		const getTest = async () => {
 			try {
 				const res = await axiosInstance.get(`${baseURL}/test/${testId}`);
-				res.data.imageURL = baseURL + res.data.imagePath;
 				setTest(res.data);
 				setCheckedTags(res.data.tags);
 
@@ -159,7 +181,7 @@ const EditTest = ({ currentUser }) => {
 									Test image
 								</>
 							) : (
-								<img style={{ height: 310, width: 482 }} src={test.imageURL} alt="" />
+								<img style={{ height: 310, width: 482 }} src={test.imageURL || test.imagePath} alt="" />
 							)}
 						</label>
 						<input

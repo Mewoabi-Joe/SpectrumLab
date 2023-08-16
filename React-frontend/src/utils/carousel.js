@@ -9,12 +9,12 @@ export const generateCarouselItemsForMobileScreens = (tests) => {
 		if (index === 0)
 			return (
 				<div className="carousel-item active" data-bs-interval="3000" key={index}>
-					<LabTestCard name={test.name} image={`${baseURL}${test.imagePath}`} price={test.price} />
+					<LabTestCard name={test.name} image={`${test.imagePath}`} price={test.price} />
 				</div>
 			);
 		return (
 			<div className="carousel-item" data-bs-interval="3000" key={index}>
-				<LabTestCard name={test.name} image={`${baseURL}${test.imagePath}`} price={test.price} />
+				<LabTestCard name={test.name} image={`${test.imagePath}`} price={test.price} />
 			</div>
 		);
 	});
@@ -28,13 +28,9 @@ export const generateCarouselItemsForMediumScreens = (tests) => {
 			carouselTests.push(
 				<div className="carousel-item active  " data-bs-interval="4000" key={i}>
 					<div className="d-flex justify-content-evenly">
-						<LabTestCard name={tests[i].name} image={`${baseURL}${tests[i].imagePath}`} price={tests[i].price} />
+						<LabTestCard name={tests[i].name} image={`${tests[i].imagePath}`} price={tests[i].price} />
 						{i + 1 < tests.length && (
-							<LabTestCard
-								name={tests[i + 1].name}
-								image={`${baseURL}${tests[i + 1].imagePath}`}
-								price={tests[i + 1].price}
-							/>
+							<LabTestCard name={tests[i + 1].name} image={`${tests[i + 1].imagePath}`} price={tests[i + 1].price} />
 						)}
 					</div>
 				</div>
@@ -43,12 +39,8 @@ export const generateCarouselItemsForMediumScreens = (tests) => {
 			carouselTests.push(
 				<div className="carousel-item  " data-bs-interval="4000" key={i}>
 					<div className="d-flex justify-content-evenly">
-						<LabTestCard name={tests[i].name} image={`${baseURL}${tests[i].imagePath}`} price={tests[i].price} />
-						<LabTestCard
-							name={tests[i + 1].name}
-							image={`${baseURL}${tests[i + 1].imagePath}`}
-							price={tests[i + 1].price}
-						/>
+						<LabTestCard name={tests[i].name} image={`${tests[i].imagePath}`} price={tests[i].price} />
+						<LabTestCard name={tests[i + 1].name} image={`${tests[i + 1].imagePath}`} price={tests[i + 1].price} />
 					</div>
 				</div>
 			);
@@ -65,20 +57,12 @@ export const generateCarouselItemsForLargeScreens = (tests) => {
 			carouselTests.push(
 				<div className="carousel-item active" data-bs-interval="4000" key={i}>
 					<div className="d-flex justify-content-evenly">
-						<LabTestCard name={tests[i].name} image={`${baseURL}${tests[i].imagePath}`} price={tests[i].price} />
+						<LabTestCard name={tests[i].name} image={`${tests[i].imagePath}`} price={tests[i].price} />
 						{i + 1 < tests.length && (
-							<LabTestCard
-								name={tests[i + 1].name}
-								image={`${baseURL}${tests[i + 1].imagePath}`}
-								price={tests[i + 1].price}
-							/>
+							<LabTestCard name={tests[i + 1].name} image={`${tests[i + 1].imagePath}`} price={tests[i + 1].price} />
 						)}
 						{i + 2 < tests.length && (
-							<LabTestCard
-								name={tests[i + 2].name}
-								image={`${baseURL}${tests[i + 2].imagePath}`}
-								price={tests[i + 2].price}
-							/>
+							<LabTestCard name={tests[i + 2].name} image={`${tests[i + 2].imagePath}`} price={tests[i + 2].price} />
 						)}
 					</div>
 				</div>
@@ -87,17 +71,9 @@ export const generateCarouselItemsForLargeScreens = (tests) => {
 			carouselTests.push(
 				<div className="carousel-item  " data-bs-interval="4000" key={i}>
 					<div className="d-flex justify-content-evenly">
-						<LabTestCard name={tests[i].name} image={`${baseURL}${tests[i].imagePath}`} price={tests[i].price} />
-						<LabTestCard
-							name={tests[i + 1].name}
-							image={`${baseURL}${tests[i + 1].imagePath}`}
-							price={tests[i + 1].price}
-						/>
-						<LabTestCard
-							name={tests[i + 2].name}
-							image={`${baseURL}${tests[i + 2].imagePath}`}
-							price={tests[i + 1].price}
-						/>
+						<LabTestCard name={tests[i].name} image={`${tests[i].imagePath}`} price={tests[i].price} />
+						<LabTestCard name={tests[i + 1].name} image={`${tests[i + 1].imagePath}`} price={tests[i + 1].price} />
+						<LabTestCard name={tests[i + 2].name} image={`${tests[i + 2].imagePath}`} price={tests[i + 1].price} />
 					</div>
 				</div>
 			);

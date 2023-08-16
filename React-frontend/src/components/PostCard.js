@@ -107,7 +107,7 @@ const PostCard = ({
 								state: { title, description, youtubeVideoUrl, imageUrl, types, created_at },
 							});
 						}}
-						src={baseURL + imageUrl}
+						src={imageUrl}
 						className={`card-img-top rounded-0 `}
 						style={{
 							objectFit: "cover",

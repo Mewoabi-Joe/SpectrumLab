@@ -10,7 +10,6 @@ const router = express_1.default.Router();
 router.post("/posts", file_middleware_1.default.single("image"), posts_controllers_1.createPost);
 router.get("/posts", posts_controllers_1.getAllPosts);
 router.get("/posts/:id", posts_controllers_1.getPostById);
-router.get("/post/image/:id", posts_controllers_1.getPostImage);
 router.delete("/posts/:id", posts_controllers_1.deletePost);
 exports.default = router;
 //# sourceMappingURL=posts.routes.js.map

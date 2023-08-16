@@ -33,7 +33,7 @@ const LabTestDetails = ({ currentUser }) => {
 			amount: state.price,
 			externalId: state._id,
 			email: user.email,
-			redirectUrl: `https://frontend-clinic.herokuapp.com/my_lab_tests/${user.userId}`,
+			redirectUrl: `https://clinicproject-joe.webdevmobiledev.com/my_lab_tests/${user.userId}`,
 		};
 
 		console.log(body);
@@ -56,7 +56,7 @@ const LabTestDetails = ({ currentUser }) => {
 						<h2 className="text-center d-lg-none ">{state.name}</h2>
 						<img
 							style={{ objectFit: "cover", height: 310, width: 482 }}
-							src={baseURL + state.imagePath}
+							src={state.imagePath}
 							alt="Test Image"
 							className="img-fluid "
 						/>
